@@ -8,10 +8,14 @@
 </template>
 
 <script>
+import { reactive } from 'vue';
 import {mapGetters} from 'vuex'
 
 export default{
   name: "Home",
+  beforeCreate(){
+    const loading = reactive();
+  },
   computed:{
     ...mapGetters(['user'])
   }
